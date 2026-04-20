@@ -26,29 +26,29 @@ RegisterNumber:  212225230054
 import numpy as np
 import matplotlib.pyplot as plt
 
-X = np.array([1, 2, 3, 4, 5])
-Y = np.array([2, 4, 5, 4, 5])
+A = np.array([1, 2, 3, 4, 5])
+B = np.array([2, 4, 5, 4, 5])
 
-x_mean = np.mean(X)
-y_mean = np.mean(Y)
+a_mean = np.mean(A)
+b_mean = np.mean(B)
 
-numerator = np.sum((X - x_mean) * (Y - y_mean))
-denominator = np.sum((X - x_mean) ** 2)
+numerator = np.sum((A - a_mean) * (B - b_mean))
+denominator = np.sum((A - a_mean) ** 2)
 
 m = numerator/denominator
-b = y_mean - m * x_mean
+c = b_mean - m *a_mean
 
 print("Slope (m):", m)
-print("Intercept (b):", b)
+print("Intercept (b):", c)
 
-Y_pred = m * X + b
-x = input("Enter value: ")
-yy = m * float(x) + b
-print("Value:", yy)
-plt.scatter(X, Y, label="Data Points")
-plt.plot(X, Y_pred, label="Best Fit Line")
-plt.xlabel("X")
-plt.ylabel("Y")
+B_pred = m * A + c
+a = input("Enter value: ")
+bb = m * float(a) + c
+print("Value:", bb)
+plt.scatter(A, B, label="Data Points")
+plt.plot(A, B_pred, label="Best Fit Line")
+plt.xlabel("A")
+plt.ylabel("B")
 plt.legend()
 plt.title("Univariate Linear Regression")
 plt.show()
@@ -56,8 +56,8 @@ plt.show()
 
 ## Output:
 ![best fit line](sam.png)
-<img width="855" height="637" alt="Screenshot 2026-04-20 144508" src="https://github.com/user-attachments/assets/6c936723-ba37-463b-8a5c-13e4f5e3ebcc" />
-<img width="835" height="592" alt="Screenshot 2026-04-20 144524" src="https://github.com/user-attachments/assets/17163c74-38a0-4bb1-83b7-0e78249785ae" />
+<img width="790" height="609" alt="Screenshot 2026-04-20 203154" src="https://github.com/user-attachments/assets/083f9cb5-d732-40f1-a275-2cc58b6c6252" />
+<img width="719" height="601" alt="Screenshot 2026-04-20 203236" src="https://github.com/user-attachments/assets/2b8cfbc9-94bc-4077-a5f8-f74c6a91b8f4" />
 
 
 ## Result:
